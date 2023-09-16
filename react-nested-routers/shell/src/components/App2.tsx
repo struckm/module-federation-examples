@@ -13,6 +13,7 @@ export default () => {
   // Listen to navigation events dispatched inside app2 mfe.
   useEffect(() => {
     const app2NavigationEventHandler = (event: Event) => {
+      console.log('Navigating to Application 2');
       const pathname = (event as CustomEvent<string>).detail;
       const newPathname = `${app2Basename}${pathname}`;
       if (newPathname === location.pathname) {
